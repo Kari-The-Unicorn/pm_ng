@@ -8,6 +8,7 @@ export class ProductListComponent{
     title: string = "Pizza List";
     imageWidth: number = 150;
     imageMargin: number = 2;
+    showImage: boolean = false;
     products: any[] = [
         {
             "productId":2,
@@ -18,5 +19,9 @@ export class ProductListComponent{
             "starRating": 3,
             "imageUrl":"assets/images/pizza.jpg"
         }
-    ]
+    ];
+
+    toggleImage(): void {
+        this.showImage = !this.showImage;
+    }
 };
